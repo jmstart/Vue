@@ -45,7 +45,7 @@
     Git地址：https://github.com/vuejs
     **尤雨溪**，Vue.js 创作者，Vue Technology创始人，致力于Vue的研究开发。
   
-4. Node和NPM
+  4. Node和NPM
 
     NPM是Node提供的模块管理工具，可以非常方便的下载安装很多前端框架，包括Jquery、AngularJS、VueJs都有。为了方便，先安装node及NPM工具。
     
@@ -66,10 +66,9 @@
     然后通过`nrm test npm `来测试速度：
     - 安装完成请一定要重启下电脑！！！
     
-5. 快速入门
-    
-  5.1 下载安装
-
+  5.1 快速入门
+  
+    下载安装
     下载地址：https://github.com/vuejs/vue
     可以下载2.5.16版本https://github.com/vuejs/vue/archive/v2.5.16.zip
     下载解压，得到vue.js文件。
@@ -94,10 +93,10 @@
     安装Vue，输入命令：`npm install vue --save`
     然后就会在hello-vue目录发现一个node_modules目录，并且在下面有一个vue目录。
     node_modules是通过npm安装的所有模块的默认位置。
-  
-6. 入门案例
     
-  6.1 vue渲染
+  6.1 入门案例
+  
+    vue渲染
 
     然后我们通过Vue进行渲染：
     ```html
@@ -163,9 +162,9 @@
     - 这里用`v-on`指令绑定点击事件，而不是普通的`onclick`，然后直接操作num
     - 普通click是无法直接操作num的。
   
-7. Vue实例
+  7.1 Vue实例
   
-  7.1 创建Vue实例
+    创建Vue实例
 
     每个 Vue 应用都是通过用 `Vue` 函数创建一个新的 **Vue 实例**开始的：
 
@@ -246,7 +245,8 @@
     })
     ```
   
-8. 
+  
+  8. 
   
   9
   

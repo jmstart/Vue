@@ -92,7 +92,7 @@
     
    下载地址：https://github.com/vuejs/vue
    
-   可以下载2.5.16版本https://github.com/vuejs/vue/archive/v2.5.16.zip
+   可以下载2.5.16版本：https://github.com/vuejs/vue/archive/v2.5.16.zip
      
     下载解压，得到vue.js文件。
     

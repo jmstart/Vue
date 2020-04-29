@@ -1,6 +1,6 @@
 # Vue
 
-  1. 前言
+ 一. 前言
     
     > 静态页面
     - 最初的网页以HTML为主，是纯静态的网页。网页是只读的，信息流只能从服务的到客户端单向流通。**开发人员也只关心页面的样式和内容**即可。
@@ -22,7 +22,7 @@
     - node.js的伟大之处不在于让JS迈向了后端开发，而是构建了一个庞大的生态系统。
     - 2010年，NPM作为node.js的包管理系统首次发布，开发人员可以遵循Common.js规范来编写Node.js模块，然后发布到NPM上供其他开发人员使用。目前已经是世     界最大的包模块管理系统。
     
-  2. MVVM模式
+ 二. MVVM模式
   
     - M：即Model，模型，包括数据和一些基本操作
     - V：即View，视图，页面渲染结果
@@ -34,7 +34,7 @@
     - 只要我们Model发生了改变，View上自然就会表现出来。
     - 当用户修改了View，Model中的数据也会跟着改变。
   
-  3. 认识Vue
+ 三. 认识Vue
 
     Vue (读音 /vjuː/，类似于 **view**) 是一套用于构建用户界面的**渐进式框架**。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核  心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与[现代化的工具链(https://cn.vuejs.org/v2/guide/single-file-components.html)以及各种[支持类库](https://github.com/vuejs/awesome-vue#libraries--plugins)结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。
 
@@ -45,7 +45,7 @@
     Git地址：https://github.com/vuejs
     **尤雨溪**，Vue.js 创作者，Vue Technology创始人，致力于Vue的研究开发。
   
-  4. Node和NPM
+ 四. Node和NPM
 
     NPM是Node提供的模块管理工具，可以非常方便的下载安装很多前端框架，包括Jquery、AngularJS、VueJs都有。为了方便，先安装node及NPM工具。
     
@@ -66,14 +66,14 @@
     然后通过`nrm test npm `来测试速度：
     - 安装完成请一定要重启下电脑！！！
     
-  5.1 快速入门
+五. 快速入门
   
     下载安装
     下载地址：https://github.com/vuejs/vue
     可以下载2.5.16版本https://github.com/vuejs/vue/archive/v2.5.16.zip
     下载解压，得到vue.js文件。
     
-  5.2 使用CDN
+  5.1 使用CDN
 
     或者也可以直接使用公共的CDN服务：
     ```html
@@ -85,7 +85,7 @@
     <!-- 生产环境版本，优化了尺寸和速度 -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     ```
-  5.3 推荐npm安装
+  5.2 推荐npm安装
   
     在idea的左下角，有个Terminal按钮，点击打开控制台：
     进入hello-vue目录：
@@ -94,7 +94,7 @@
     然后就会在hello-vue目录发现一个node_modules目录，并且在下面有一个vue目录。
     node_modules是通过npm安装的所有模块的默认位置。
     
-  6.1 入门案例
+六. 入门案例
   
     vue渲染
 
@@ -153,7 +153,7 @@
     - 页面`{{num}}`与数据num绑定，因此num值变化，引起了页面效果变化。
     没有任何dom操作，这就是双向绑定的魅力。
   
-  6.3 事件处理
+  6.2 事件处理
 
     我们在页面添加一个按钮：
     ```html
@@ -162,7 +162,7 @@
     - 这里用`v-on`指令绑定点击事件，而不是普通的`onclick`，然后直接操作num
     - 普通click是无法直接操作num的。
   
-  7.1 Vue实例
+七. Vue实例
   
     创建Vue实例
 
@@ -178,7 +178,7 @@
     - data
     - methods
   
-  7.2 模板或元素
+  7.1 模板或元素
 
     每个Vue实例都需要关联一段Html模板，Vue会基于此模板进行视图渲染。
     我们可以通过el属性来指定。
@@ -196,7 +196,7 @@
     ```
     这样，Vue就可以基于id为`app`的div元素作为模板进行渲染了。在这个div范围以外的部分是无法使用vue特性的。
   
-  7.3 数据
+  7.2 数据
 
     当Vue实例被创建时，它会尝试获取在data中定义的所有属性，用于视图的渲染，并且监视data中的属性变化，当data发生改变，所有相关的视图都将重新渲染，这   就是“响应式“系统。
 
@@ -218,7 +218,7 @@
     - name的变化会影响到`input`的值
     - input中输入的值，也会导致vm中的name发生改变
     
-  7.4 方法
+  7.3 方法
 
     Vue实例中除了可以定义data属性，也可以定义方法，并且在Vue的作用范围内使用。
 

@@ -36,13 +36,16 @@
   
  三. 认识Vue
 
-    Vue (读音 /vjuː/，类似于 **view**) 是一套用于构建用户界面的**渐进式框架**。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核  心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与[现代化的工具链(https://cn.vuejs.org/v2/guide/single-file-components.html)以及各种[支持类库](https://github.com/vuejs/awesome-vue#libraries--plugins)结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。
+    Vue (读音 /vjuː/，类似于 **view**) 是一套用于构建用户界面的**渐进式框架**。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核  心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与
+   [现代化的工具链(https://cn.vuejs.org/v2/guide/single-file-components.html)以及各种[支持类库](https://github.com/vuejs/awesome-vue#libraries--plugins)
+    结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。
 
     ​	前端框架三巨头：Vue.js、React.js、AngularJS，vue.js以期轻量易用著称，vue.js和React.js发展速度最快，AngularJS还是老大。
 
-    官网：https://cn.vuejs.org/
-    参考：https://cn.vuejs.org/v2/guide/
-    Git地址：https://github.com/vuejs
+   官网：https://cn.vuejs.org/
+   参考：https://cn.vuejs.org/v2/guide/
+   Git地址：https://github.com/vuejs
+      
     **尤雨溪**，Vue.js 创作者，Vue Technology创始人，致力于Vue的研究开发。
   
  四. Node和NPM
@@ -51,47 +54,64 @@
     
   4.1 下载Node.js
 
-    下载地址：[https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+   下载地址：[https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+    
     推荐下载LTS版本
     下一步安装即可,完成以后，在控制台输入：node -v
     
   4.2 NPM
 
     安装完成Node应该自带了NPM了，在控制台输入`npm -v`查看
+    
     npm默认的仓库地址是在国外网站，速度较慢，建议大家设置到阿里镜像。但是切换镜像是比较麻烦的。推荐一款切换镜像的工具：nrm
+    
     我们首先安装nrm，这里`-g`代表全局安装
     npm install nrm -g
+    
     然后通过`nrm ls`命令查看npm的仓库列表,带*的就是当前选中的镜像仓库：
+    
     通过`nrm use taobao`来指定要使用的镜像源：
+    
     然后通过`nrm test npm `来测试速度：
+    
     - 安装完成请一定要重启下电脑！！！
     
 五. 快速入门
   
-    下载安装
-    下载地址：https://github.com/vuejs/vue
-    可以下载2.5.16版本https://github.com/vuejs/vue/archive/v2.5.16.zip
+    下载安装:
+    
+   下载地址：https://github.com/vuejs/vue
+   可以下载2.5.16版本https://github.com/vuejs/vue/archive/v2.5.16.zip
+     
     下载解压，得到vue.js文件。
     
   5.1 使用CDN
 
     或者也可以直接使用公共的CDN服务：
-    ```html
+    
+   ```html
     <!-- 开发环境版本，包含了用帮助的命令行警告 -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    ```
+   ```
+    
     或者：
-    ```html
+    
+   ```html
     <!-- 生产环境版本，优化了尺寸和速度 -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    ```
+   ```
   5.2 推荐npm安装
   
     在idea的左下角，有个Terminal按钮，点击打开控制台：
+    
     进入hello-vue目录：
+    
     先输入：`npm init -y` 进行初始化
+    
     安装Vue，输入命令：`npm install vue --save`
+    
     然后就会在hello-vue目录发现一个node_modules目录，并且在下面有一个vue目录。
+    
     node_modules是通过npm安装的所有模块的默认位置。
     
 六. 入门案例
@@ -99,6 +119,7 @@
     vue渲染
 
     然后我们通过Vue进行渲染：
+    
     ```html
     <div id="app">
         <h2>{{name}} 非常帅</h2>
@@ -114,16 +135,20 @@
         })
     </script>
     ```
+    
     - 首先通过 new Vue()来创建Vue实例
+    
     - 然后构造函数接收一个对象，对象中有一些属性：
       - el：是element的缩写，通过id选中要渲染的页面元素，本例中是一个div
       - data：数据，数据是一个对象，里面有很多属性，都可以渲染到视图中
         - name：这里我们指定了一个name属性
+        
     - 页面中的`h2`元素中，我们通过{{name}}的方式，来渲染刚刚定义的name属性。
 
   6.1 双向绑定
 
     我们对刚才的案例进行简单修改：
+    
     ```html
     <div id="app">
         <input type="text" v-model="num">
@@ -132,7 +157,9 @@
             有{{num}}位女神为他着迷。
         </h2>
     </div>
+    
     <script src="./node_modules/vue/dist/vue.js"></script>
+    
     <script type="text/javascript">
         // 生成一个Vue实例
         var app = new Vue({
@@ -144,22 +171,30 @@
         })
     </script>
     ```
+    
     - 我们在data添加了新的属性：`num`
+    
     - 在页面中有一个`input`元素，通过`v-model`与`num`进行绑定。
+    
     - 同时通过`{{num}}`在页面输出
 
     可观察到，输入框的变化引起了data中的num的变化，同时页面输出也跟着变化。
     - input与num绑定，input的value值变化，影响到了data中的num值
+    
     - 页面`{{num}}`与数据num绑定，因此num值变化，引起了页面效果变化。
+    
     没有任何dom操作，这就是双向绑定的魅力。
   
   6.2 事件处理
 
     我们在页面添加一个按钮：
+    
     ```html
     <button v-on:click="num++">点我</button>
     ```
+    
     - 这里用`v-on`指令绑定点击事件，而不是普通的`onclick`，然后直接操作num
+    
     - 普通click是无法直接操作num的。
   
 七. Vue实例
@@ -173,7 +208,9 @@
       // 选项
     })
     ```
+    
     在构造函数中传入一个对象，并且在对象中声明各种Vue需要的数据和方法，包括：
+    
     - el
     - data
     - methods
@@ -181,31 +218,39 @@
   7.1 模板或元素
 
     每个Vue实例都需要关联一段Html模板，Vue会基于此模板进行视图渲染。
+    
     我们可以通过el属性来指定。
+    
     例如一段html模板：
+    
     ```html
     <div id="app">
 
     </div>
     ```
+    
     然后创建Vue实例，关联这个div
+    
     ```js
     var vm = new Vue({
       el:"#app"
     })
     ```
+    
     这样，Vue就可以基于id为`app`的div元素作为模板进行渲染了。在这个div范围以外的部分是无法使用vue特性的。
   
   7.2 数据
 
-    当Vue实例被创建时，它会尝试获取在data中定义的所有属性，用于视图的渲染，并且监视data中的属性变化，当data发生改变，所有相关的视图都将重新渲染，这   就是“响应式“系统。
+    当Vue实例被创建时，它会尝试获取在data中定义的所有属性，用于视图的渲染，并且监视data中的属性变化，
+    当data发生改变，所有相关的视图都将重新渲染，这就是“响应式“系统。
 
-    html：
+    html:
     ```html
     <div id="app">
         <input type="text" v-model="name"/>
     </div>
     ```
+    
     js:
     ```js
     var vm = new Vue({
@@ -215,6 +260,7 @@
         }
     })
     ```
+    
     - name的变化会影响到`input`的值
     - input中输入的值，也会导致vm中的name发生改变
     
@@ -229,6 +275,7 @@
         <button v-on:click="add">加</button>
     </div>
     ```
+    
     js:
     ```js
     var vm = new Vue({
@@ -246,4 +293,3 @@
     ```
   
   
-

@@ -48,8 +48,9 @@
     [现代化的工具链(https://cn.vuejs.org/v2/guide/single-file-components.html)以及各种[支持类库](https://github.com/vuejs/awesome-vue#libraries--plugins)
     结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。
 
+   
     ​	前端框架三巨头：Vue.js、React.js、AngularJS，vue.js以期轻量易用著称，vue.js和React.js发展速度最快，AngularJS还是老大。
-
+    
    官网：https://cn.vuejs.org/
    
    参考：https://cn.vuejs.org/v2/guide/

@@ -6,26 +6,34 @@
     - 最初的网页以HTML为主，是纯静态的网页。网页是只读的，信息流只能从服务的到客户端单向流通。**开发人员也只关心页面的样式和内容**即可。
 
     > 异步刷新，操作DOM
+    
     - 1995年，网景工程师Brendan Eich 花了10天时间设计了JavaScript语言.
       随着JavaScript的诞生，我们可以操作页面的DOM元素及样式，页面有了一些动态的效果，但是依然是以静态为主。
+      
     - ajax盛行：
       - 2005年开始，ajax逐渐被前端开发人员所重视，因为不用刷新页面就可以更新页面的数据和渲染效果。
+      
       - 此时的**开发人员不仅仅要编写HTML样式，还要懂ajax与后端交互，然后通过JS操作Dom元素来实现页面动态效果**。比较流行的框架如Jquery就是典型代       表。
 
     > MVVM，关注模型和视图
+    
     - 2008年，google的Chrome发布，随后就以极快的速度占领市场，超过IE成为浏览器市场的主导者。
+    
     - 2009年，Ryan Dahl在谷歌的Chrome V8引擎基础上，打造了基于事件循环的异步IO框架：Node.js。
       - 基于时间循环的异步IO
       - 单线程运行，避免多线程的变量同步问题
       - JS可以编写后台diamante，前后台统一编程语言
 
     - node.js的伟大之处不在于让JS迈向了后端开发，而是构建了一个庞大的生态系统。
+    
     - 2010年，NPM作为node.js的包管理系统首次发布，开发人员可以遵循Common.js规范来编写Node.js模块，然后发布到NPM上供其他开发人员使用。目前已经是世     界最大的包模块管理系统。
     
  二. MVVM模式
   
     - M：即Model，模型，包括数据和一些基本操作
+    
     - V：即View，视图，页面渲染结果
+    
     - VM：即View-Model，模型与视图间的双向操作（无需开发人员干涉）
 
     在MVVM之前，开发人员从后端获取需要的数据模型，然后要通过DOM操作Model渲染到View中。而后当用户操作视图，我们还需要通过DOM获取View中的数据，然后同     步到Model中。
@@ -37,13 +45,15 @@
  三. 认识Vue
 
     Vue (读音 /vjuː/，类似于 **view**) 是一套用于构建用户界面的**渐进式框架**。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核  心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与
-   [现代化的工具链(https://cn.vuejs.org/v2/guide/single-file-components.html)以及各种[支持类库](https://github.com/vuejs/awesome-vue#libraries--plugins)
+    [现代化的工具链(https://cn.vuejs.org/v2/guide/single-file-components.html)以及各种[支持类库](https://github.com/vuejs/awesome-vue#libraries--plugins)
     结合使用时，Vue 也完全能够为复杂的单页应用提供驱动。
 
     ​	前端框架三巨头：Vue.js、React.js、AngularJS，vue.js以期轻量易用著称，vue.js和React.js发展速度最快，AngularJS还是老大。
 
    官网：https://cn.vuejs.org/
+   
    参考：https://cn.vuejs.org/v2/guide/
+   
    Git地址：https://github.com/vuejs
       
     **尤雨溪**，Vue.js 创作者，Vue Technology创始人，致力于Vue的研究开发。
@@ -81,6 +91,7 @@
     下载安装:
     
    下载地址：https://github.com/vuejs/vue
+   
    可以下载2.5.16版本https://github.com/vuejs/vue/archive/v2.5.16.zip
      
     下载解压，得到vue.js文件。
@@ -120,7 +131,7 @@
 
     然后我们通过Vue进行渲染：
     
-    ```html
+   ```html
     <div id="app">
         <h2>{{name}} 非常帅</h2>
     </div>
@@ -134,7 +145,7 @@
             }
         })
     </script>
-    ```
+   ```
     
     - 首先通过 new Vue()来创建Vue实例
     
@@ -149,7 +160,7 @@
 
     我们对刚才的案例进行简单修改：
     
-    ```html
+   ```html
     <div id="app">
         <input type="text" v-model="num">
         <h2>
@@ -170,7 +181,7 @@
             }
         })
     </script>
-    ```
+   ```
     
     - 我们在data添加了新的属性：`num`
     
@@ -189,9 +200,9 @@
 
     我们在页面添加一个按钮：
     
-    ```html
+   ```html
     <button v-on:click="num++">点我</button>
-    ```
+   ```
     
     - 这里用`v-on`指令绑定点击事件，而不是普通的`onclick`，然后直接操作num
     
@@ -203,11 +214,11 @@
 
     每个 Vue 应用都是通过用 `Vue` 函数创建一个新的 **Vue 实例**开始的：
 
-    ```javascript
+   ```javascript
     var vm = new Vue({
       // 选项
     })
-    ```
+   ```
     
     在构造函数中传入一个对象，并且在对象中声明各种Vue需要的数据和方法，包括：
     
@@ -223,19 +234,19 @@
     
     例如一段html模板：
     
-    ```html
+   ```html
     <div id="app">
 
     </div>
-    ```
+   ```
     
     然后创建Vue实例，关联这个div
     
-    ```js
+   ```js
     var vm = new Vue({
       el:"#app"
     })
-    ```
+   ```
     
     这样，Vue就可以基于id为`app`的div元素作为模板进行渲染了。在这个div范围以外的部分是无法使用vue特性的。
   
@@ -245,21 +256,21 @@
     当data发生改变，所有相关的视图都将重新渲染，这就是“响应式“系统。
 
     html:
-    ```html
+   ```html
     <div id="app">
         <input type="text" v-model="name"/>
     </div>
-    ```
+   ```
     
     js:
-    ```js
+   ```js
     var vm = new Vue({
         el:"#app",
         data:{
             name:"刘德华"
         }
     })
-    ```
+   ```
     
     - name的变化会影响到`input`的值
     - input中输入的值，也会导致vm中的name发生改变
@@ -269,15 +280,15 @@
     Vue实例中除了可以定义data属性，也可以定义方法，并且在Vue的作用范围内使用。
 
     html:
-    ```html
+   ```html
     <div id="app">
         {{num}}
         <button v-on:click="add">加</button>
     </div>
-    ```
+   ```
     
     js:
-    ```js
+   ```js
     var vm = new Vue({
         el:"#app",
         data:{
@@ -290,6 +301,6 @@
             }
         }
     })
-    ```
+   ```
   
   
